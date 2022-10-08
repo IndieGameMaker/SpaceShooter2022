@@ -1,0 +1,54 @@
+
+
+클래스 : 함수, 변수의 집합
+함수 : 재사용하기 위한 로직의 집합
+변수 : 데이터 저장을 위한 공간
+변수 타입 : 정수, 실수, 불(Bool : True/False), 문자열("User Name"), ...
+
+class 클래스명
+{
+    //변수타입 변수명 = 초깃값;
+
+    // 정수
+    int playerLevel = 0;
+    // 실수
+    float power = 100.0f;
+    // 문자열(String)
+    string nickName = "Zack";
+
+
+    // 함수 : 로직의 집합(그룹)
+    // 반환값 있는 함수
+    /*
+        반환타입 함수명 (파라메터1, 파라메터2, ...)
+        {
+            return 반환할_값;
+        }
+    */
+
+    int value = Sum(1, 2);
+
+    int Sum(int a, int b)
+    {
+        return a + b; //1 + 2
+    }
+
+    // 반환값 없는 함수
+    /*
+        void 함수명()
+        {
+            로직1;
+            로직2;
+        }
+    */
+
+    Sum(2,5);
+
+    void Sum(int a, int b)
+    {
+        int value = a + b; //2 + 5
+        print(value);
+    }
+}
+
+// EUC-KR ==> UTF8
