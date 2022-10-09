@@ -27,6 +27,7 @@ public class PlayerCtrl : MonoBehaviour
         //tr.position = tr.position + new Vector3(0, 0, 0.01f);
         //tr.position += new Vector3(0, 0, 0.01f);
         tr.position += Vector3.forward * 0.01f * v;
+        tr.position += Vector3.right * 0.01f * h;
 
     }
 }
