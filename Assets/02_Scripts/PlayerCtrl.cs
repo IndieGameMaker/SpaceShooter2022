@@ -8,10 +8,12 @@ public class PlayerCtrl : MonoBehaviour
     // 접근제한자(접근한정자) public , private
     private float h = 0.0f;
     private float v = 0.0f;
+    private float r = 0.0f;
 
     // Transform 컴포넌트를 저장하기 위한 변수 선언
     public Transform tr;
     public float moveSpeed = 8.0f;
+    public float turnSpeed = 100.0f;
 
     void Start()
     {
