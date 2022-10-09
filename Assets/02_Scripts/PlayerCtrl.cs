@@ -25,10 +25,12 @@ public class PlayerCtrl : MonoBehaviour
         // GetAxis 함수 / 메소드 (명령, 동사) , 대문자 시작, 파스칼 표기법 GetAge, GetLevel, SetItem
         h = Input.GetAxis("Horizontal"); // -1.0f ~ 0.0f ~ +1.0f
         v = Input.GetAxis("Vertical"); // -1.0f ~ 0.0f ~ +1.0f
+        r = Input.GetAxis("Mouse X"); // - ... +
 
         // 벡터의 덧셈 연산을 통해서 방향을 계산
         Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
         tr.Translate(moveDir.normalized * Time.deltaTime * moveSpeed);
+        tr.Rotate(Vector3.up * Time.deltaTime * turnSpeed * r);
     }
 }
 
