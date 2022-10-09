@@ -28,6 +28,25 @@ public class PlayerCtrl : MonoBehaviour
 }
 
 
+/*
+벡터 Vector : 방향, 크기
+
+구조체(클래스와 유사)
+Vector3 (x, y, z)
+
+변수 선언
+
+Vector3 direction = new Vector3(3, 2, 1);
+
+direction.x = 3;
+direction.y = 2;
+direction.z = 1;
+
+
+100, 200 : 스칼라
+
+*/
+
 
 
 /*
