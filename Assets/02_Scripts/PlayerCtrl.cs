@@ -25,13 +25,22 @@ public class PlayerCtrl : MonoBehaviour
         v = Input.GetAxis("Vertical"); // -1.0f ~ 0.0f ~ +1.0f
 
         //tr.position = tr.position + new Vector3(0, 0, 0.01f);
-        tr.position += new Vector3(0, 0, 0.01f);
+        //tr.position += new Vector3(0, 0, 0.01f);
+        tr.position += Vector3.forward * 0.01f;
 
     }
 }
 
 
-/*
+/* Shothand
+    Vector3.forward = Vector3(0, 0, 1)
+    Vector3.up      = Vector3(0, 1, 0)
+    Vector3.right   = Vector3(1, 0, 0)
+
+    Vector3.one = Vector3(1, 1, 1)
+    Vector3.zero = Vector3(0, 0, 0)
+
+
 벡터 Vector : 방향, 크기
 
 구조체(클래스와 유사)
