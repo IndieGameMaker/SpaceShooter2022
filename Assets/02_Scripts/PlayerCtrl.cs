@@ -24,7 +24,8 @@ public class PlayerCtrl : MonoBehaviour
 
         v = Input.GetAxis("Vertical"); // -1.0f ~ 0.0f ~ +1.0f
 
-        tr.position = tr.position + new Vector3(0, 0, 0.01f);
+        //tr.position = tr.position + new Vector3(0, 0, 0.01f);
+        tr.position += new Vector3(0, 0, 0.01f);
 
     }
 }
