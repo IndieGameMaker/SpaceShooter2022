@@ -15,7 +15,7 @@ public class PlayerCtrl : MonoBehaviour
 
     void Start()
     {
-
+        tr = GetComponent<Transform>(); // 제너릭 문법(Gineric)
     }
 
     void Update()
