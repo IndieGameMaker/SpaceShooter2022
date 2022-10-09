@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody rb;
+
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
 
+        // 로컬좌표계 기준으로 힘을 가하는 메소드(함수)
+        rb.AddRelativeForce(Vector3.forward * 1000.0f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
