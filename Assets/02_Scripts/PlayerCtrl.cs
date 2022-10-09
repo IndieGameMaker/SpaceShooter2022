@@ -30,7 +30,7 @@ public class PlayerCtrl : MonoBehaviour
 
         // 벡터의 덧셈 연산을 통해서 방향을 계산
         Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
-        tr.Translate(moveDir.normalized * 0.01f);
+        tr.Translate(moveDir.normalized * Time.deltaTime * 8.0f);
     }
 }
 
