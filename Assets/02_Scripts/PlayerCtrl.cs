@@ -21,8 +21,9 @@ public class PlayerCtrl : MonoBehaviour
     {
         // GetAxis 함수 / 메소드 (명령, 동사) , 대문자 시작, 파스칼 표기법 GetAge, GetLevel, SetItem
         h = Input.GetAxis("Horizontal"); // -1.0f ~ 0.0f ~ +1.0f
-
         Debug.Log("h=" + h);
+        v = Input.GetAxis("Vertical"); // -1.0f ~ 0.0f ~ +1.0f
+        Debug.Log("v=" + v);
     }
 }
 
