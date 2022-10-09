@@ -12,12 +12,15 @@ public class PlayerCtrl : MonoBehaviour
 
     // Transform 컴포넌트를 저장하기 위한 변수 선언
     public Transform tr;
+    private Animator anim;
+
     public float moveSpeed = 8.0f;
     public float turnSpeed = 100.0f;
 
     void Start()
     {
         tr = GetComponent<Transform>(); // 제너릭 문법(Gineric)
+        anim = GetComponent<Animator>();
     }
 
     void Update()
