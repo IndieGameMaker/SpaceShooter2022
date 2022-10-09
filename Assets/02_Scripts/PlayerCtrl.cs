@@ -19,7 +19,7 @@ public class PlayerCtrl : MonoBehaviour
 
     void Update()
     {
-
+        h = Input.GetAxis("Horizontal");
     }
 }
 
