@@ -11,6 +11,7 @@ public class PlayerCtrl : MonoBehaviour
 
     // Transform 컴포넌트를 저장하기 위한 변수 선언
     public Transform tr;
+    public float moveSpeed = 8.0f;
 
     void Start()
     {
