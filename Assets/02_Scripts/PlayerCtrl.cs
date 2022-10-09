@@ -24,14 +24,9 @@ public class PlayerCtrl : MonoBehaviour
         h = Input.GetAxis("Horizontal"); // -1.0f ~ 0.0f ~ +1.0f
         v = Input.GetAxis("Vertical"); // -1.0f ~ 0.0f ~ +1.0f
 
-        //tr.position = tr.position + new Vector3(0, 0, 0.01f);
-        //tr.position += new Vector3(0, 0, 0.01f);
-        //tr.position += Vector3.forward * 0.01f * v;
-        //tr.position += Vector3.right * 0.01f * h;
-
         // 벡터의 덧셈 연산을 통해서 방향을 계산
         Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
-        tr.Translate(moveDir.normalized * Time.deltaTime * 8.0f);
+        tr.Translate(moveDir.normalized * Time.deltaTime * moveSpeed);
     }
 }
 
