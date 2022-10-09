@@ -9,13 +9,26 @@ public class Fire : MonoBehaviour
     // 총알을 생성할 위치
     public Transform firePos;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
-
+        // 마우스 왼쪽 버튼을 클릭할 때
+        if (Input.GetMouseButtonDown(0) == true)
+        {
+            // 총알 프리팹을 생성
+            Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+        }
     }
 }
+
+/*
+        // 왼쪽 마우스 버튼을 클릭할 때
+        if (조건 == 참)
+        {
+            // 조건이 참(true)일 경우 실행하는 부분
+        }
+        else
+        {
+            // 조건이 거짓(false)일 경우 실행하는 부분
+        }
+
+*/
