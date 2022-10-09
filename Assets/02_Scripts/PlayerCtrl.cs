@@ -37,6 +37,8 @@ public class PlayerCtrl : MonoBehaviour
 
         // 전/후진 애니메이션
         anim.SetFloat("v", v);
+        // 좌/우 애니메이션 컨트롤
+        anim.SetFloat("h", h);
     }
 }
 
