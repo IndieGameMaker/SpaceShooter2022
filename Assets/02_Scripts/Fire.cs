@@ -19,9 +19,17 @@ public class Fire : MonoBehaviour
         // 마우스 왼쪽 버튼을 클릭할 때
         if (Input.GetMouseButtonDown(0) == true)
         {
-            // 총알 프리팹을 생성
-            Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+            FireBullet(); // 함수명(파라메터1, 파라메터1,...)  함수명()
         }
+    }
+
+    // 총알 생성(발사)/ 총소리 발생
+    void FireBullet()
+    {
+        // 총알 프리팹을 생성
+        Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+        // 총소리 발생
+        audio.PlayOneShot(fireSfx, 0.8f);
     }
 }
 
