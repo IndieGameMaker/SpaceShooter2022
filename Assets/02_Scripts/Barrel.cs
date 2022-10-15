@@ -23,6 +23,8 @@ public class Barrel : MonoBehaviour
                 // 위로 올라가는 로직
                 var rb = this.gameObject.AddComponent<Rigidbody>();
                 rb.AddForce(Vector3.up * 1500.0f);
+
+                Destroy(this.gameObject, 2.0f);
             }
         }
     }
