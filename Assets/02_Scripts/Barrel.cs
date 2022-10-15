@@ -5,6 +5,8 @@ using UnityEngine;
 public class Barrel : MonoBehaviour
 {
     public GameObject expEffect;
+    // 텍스처를 저장하기 위한 배열(Array) 선언
+    public Texture[] textures;
 
     private int hitCount = 0;
 
