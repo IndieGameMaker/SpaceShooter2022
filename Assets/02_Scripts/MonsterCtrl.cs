@@ -39,9 +39,18 @@ public class MonsterCtrl : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
+        CheckMonsterState();
+    }
 
+    void CheckMonsterState()
+    {
+        // 몬스터와 주인공 간의 거리를 계산
+        // Vector3.Distance(A, B) 
+
+        float distance = Vector3.Distance(monsterTr.position, playerTr.position);
+
+        Debug.Log(distance);
     }
 }
