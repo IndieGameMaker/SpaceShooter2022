@@ -19,7 +19,7 @@ public class Barrel : MonoBehaviour
             {
                 // 폭발효과 이펙트
                 var obj = Instantiate(expEffect, transform.position, transform.rotation);
-                Destroy(obj, 5.0f);
+                Destroy(obj, 4.0f);
 
                 // 위로 올라가는 로직
                 var rb = this.gameObject.AddComponent<Rigidbody>();
