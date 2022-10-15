@@ -19,6 +19,10 @@ public class Barrel : MonoBehaviour
             {
                 // 폭발효과 이펙트
                 Instantiate(expEffect, transform.position, transform.rotation);
+
+                // 위로 올라가는 로직
+                var rb = this.gameObject.AddComponent<Rigidbody>();
+                rb.AddForce(Vector3.up * 1500.0f);
             }
         }
     }
