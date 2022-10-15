@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;   // 네비게이션 관련 컴포넌트를 사용하기 위해서 정의
 
 public class MonsterCtrl : MonoBehaviour
 {
@@ -24,9 +25,12 @@ public class MonsterCtrl : MonoBehaviour
     public Transform monsterTr;
     public Transform playerTr;
 
+    public NavMeshAgent agent;
+
     // Start is called before the first frame update
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
         monsterTr = GetComponent<Transform>();
 
         // Player 태그로 설정된 게임오브젝트를 추출
@@ -41,6 +45,8 @@ public class MonsterCtrl : MonoBehaviour
 
     void Update()
     {
+        agent.SetDestination(playerTr.position);
+
         CheckMonsterState();
         MonsterAction();
     }
