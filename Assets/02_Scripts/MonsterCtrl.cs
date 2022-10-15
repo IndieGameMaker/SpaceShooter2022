@@ -88,10 +88,12 @@ public class MonsterCtrl : MonoBehaviour
                 agent.SetDestination(playerTr.position);
                 agent.isStopped = false;
                 anim.SetBool("IsTrace", true);
+                anim.SetBool("IsAttack", false);
                 break;
 
             case MonsterState.ATTACK:
                 // 공격로직
+                anim.SetBool("IsAttack", true);
                 break;
         }
     }
