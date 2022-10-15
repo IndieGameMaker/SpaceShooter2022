@@ -9,6 +9,7 @@ public class Barrel : MonoBehaviour
     public Texture[] textures;
 
     // 차일드에 있는 MeshRenderer 컴포넌트를 저장할 변수를 선언
+    [HideInInspector]
     public new MeshRenderer renderer;
 
     private int hitCount = 0;
