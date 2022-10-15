@@ -21,10 +21,22 @@ public class MonsterCtrl : MonoBehaviour
     [Range(1.0f, 3.0f)]
     public float attackDist = 2.0f;
 
+    public Transform monsterTr;
+    public Transform playerTr;
+
     // Start is called before the first frame update
     void Start()
     {
+        monsterTr = GetComponent<Transform>();
 
+        // Player 태그로 설정된 게임오브젝트를 추출
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+
+        // Transform 컴포넌트를 추출
+        if (playerObj != null)
+        {
+            playerTr = playerObj.GetComponent<Transform>();
+        }
     }
 
     // Update is called once per frame
