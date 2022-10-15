@@ -15,7 +15,7 @@ public class Barrel : MonoBehaviour
 
     void Start()
     {
-
+        renderer = GetComponentInChildren<MeshRenderer>();
     }
 
     private void OnCollisionEnter(Collision coll)
