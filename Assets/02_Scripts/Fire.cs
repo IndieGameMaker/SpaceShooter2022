@@ -32,3 +32,17 @@ public class Fire : MonoBehaviour
         }
 
 */
+
+
+/*
+    Sound 처리
+
+    AudioMixer
+
+    AudioListener -- 반드시 1개만 존재
+
+    AudioSource  -- 소리를 발생시키는 컴포넌트
+
+
+
+*/
