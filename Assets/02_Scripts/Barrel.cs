@@ -14,6 +14,7 @@ public class Barrel : MonoBehaviour
     [HideInInspector]
     public new MeshRenderer renderer;
 
+    [SerializeField] // private 변수를 인스펙터 뷰에 노출시키는 어트리뷰트
     private new AudioSource audio;
 
     private int hitCount = 0;
