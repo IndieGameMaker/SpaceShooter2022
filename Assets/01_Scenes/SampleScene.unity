@@ -1621,6 +1621,8 @@ MonoBehaviour:
   state: 0
   traceDist: 10
   attackDist: 2
+  monsterTr: {fileID: 0}
+  playerTr: {fileID: 0}
 --- !u!1 &1632354634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,6 +1765,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100046, guid: f3cd25b3bf53c4adaaf087d862e435e6, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100046, guid: f3cd25b3bf53c4adaaf087d862e435e6, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: f3cd25b3bf53c4adaaf087d862e435e6, type: 3}

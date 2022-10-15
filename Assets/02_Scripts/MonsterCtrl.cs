@@ -51,6 +51,17 @@ public class MonsterCtrl : MonoBehaviour
 
         float distance = Vector3.Distance(monsterTr.position, playerTr.position);
 
-        Debug.Log(distance);
+        if (distance <= attackDist)
+        {
+            state = MonsterState.ATTACK;
+        }
+        else if (distance <= traceDist)
+        {
+            state = MonsterState.TRACE;
+        }
+        else
+        {
+            state = MonsterState.IDLE;
+        }
     }
 }
