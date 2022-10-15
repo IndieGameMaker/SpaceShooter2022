@@ -9,6 +9,11 @@ public class Fire : MonoBehaviour
     // 총알을 생성할 위치
     public Transform firePos;
 
+    // 음원파일 - 총소리 음원
+    public AudioClip fireSfx;
+    // AudioSource 컴포넌트를 저장할 변수
+    public AudioSource audio;
+
     void Update()
     {
         // 마우스 왼쪽 버튼을 클릭할 때
