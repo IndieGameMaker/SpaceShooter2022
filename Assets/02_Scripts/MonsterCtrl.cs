@@ -42,6 +42,7 @@ public class MonsterCtrl : MonoBehaviour
     void Update()
     {
         CheckMonsterState();
+        MonsterAction();
     }
 
     void CheckMonsterState()
@@ -62,6 +63,24 @@ public class MonsterCtrl : MonoBehaviour
         else
         {
             state = MonsterState.IDLE;
+        }
+    }
+
+    void MonsterAction()
+    {
+        switch (state)
+        {
+            case MonsterState.IDLE:
+                // 로직 
+                break;
+
+            case MonsterState.TRACE:
+                // 추적로직
+                break;
+
+            case MonsterState.ATTACK:
+                // 공격로직
+                break;
         }
     }
 }
