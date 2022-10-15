@@ -14,11 +14,14 @@ public class Barrel : MonoBehaviour
     [HideInInspector]
     public new MeshRenderer renderer;
 
+    private new AudioSource audio;
+
     private int hitCount = 0;
 
     void Start()
     {
         renderer = GetComponentInChildren<MeshRenderer>();
+        audio = this.gameObject.GetComponent<AudioSource>();
 
         /*  Random.Range의 난수 발생범위
             Random.Range(0, 10); 정수일 경우 => 0, 1, 2, ..., 9
@@ -40,6 +43,9 @@ public class Barrel : MonoBehaviour
             ++hitCount; // hitCount += 1; // hitCount = hitCount + 1;
             if (hitCount == 3)
             {
+                // 폭발음 처리
+                audio.PlayOneShot(expSfx, 0.6f);
+
                 // 폭발효과 이펙트
                 var obj = Instantiate(expEffect, transform.position, transform.rotation);
                 Destroy(obj, 4.0f);
