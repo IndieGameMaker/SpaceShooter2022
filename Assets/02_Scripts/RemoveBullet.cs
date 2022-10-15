@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class RemoveBullet : MonoBehaviour
 {
+    public GameObject sparkEffect;
+
     void OnCollisionEnter(Collision coll)
     {
         if (coll.collider.CompareTag("BULLET"))
@@ -27,3 +29,4 @@ public class RemoveBullet : MonoBehaviour
     OnTriggerStay()   n회 호출
     OnTriggerExit()   1회 호출
 */
+
