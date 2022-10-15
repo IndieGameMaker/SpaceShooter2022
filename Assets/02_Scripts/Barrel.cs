@@ -18,7 +18,8 @@ public class Barrel : MonoBehaviour
             if (hitCount == 3)
             {
                 // 폭발효과 이펙트
-                Instantiate(expEffect, transform.position, transform.rotation);
+                var obj = Instantiate(expEffect, transform.position, transform.rotation);
+                Destroy(obj, 5.0f);
 
                 // 위로 올라가는 로직
                 var rb = this.gameObject.AddComponent<Rigidbody>();
