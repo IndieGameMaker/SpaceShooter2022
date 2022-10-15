@@ -12,7 +12,7 @@ public class Fire : MonoBehaviour
     // 음원파일 - 총소리 음원
     public AudioClip fireSfx;
     // AudioSource 컴포넌트를 저장할 변수
-    public AudioSource audio;
+    public new AudioSource audio;
 
     void Update()
     {
