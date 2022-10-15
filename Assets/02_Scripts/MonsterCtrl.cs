@@ -32,6 +32,7 @@ public class MonsterCtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         monsterTr = GetComponent<Transform>();
 
