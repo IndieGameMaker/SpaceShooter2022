@@ -8,7 +8,15 @@ public class Barrel : MonoBehaviour
     // 텍스처를 저장하기 위한 배열(Array) 선언
     public Texture[] textures;
 
+    // 차일드에 있는 MeshRenderer 컴포넌트를 저장할 변수를 선언
+    public new MeshRenderer renderer;
+
     private int hitCount = 0;
+
+    void Start()
+    {
+
+    }
 
     private void OnCollisionEnter(Collision coll)
     {
