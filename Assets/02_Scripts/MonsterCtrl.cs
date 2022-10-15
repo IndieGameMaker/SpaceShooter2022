@@ -27,6 +27,8 @@ public class MonsterCtrl : MonoBehaviour
 
     public NavMeshAgent agent;
 
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,8 +47,6 @@ public class MonsterCtrl : MonoBehaviour
 
     void Update()
     {
-        agent.SetDestination(playerTr.position);
-
         CheckMonsterState();
         MonsterAction();
     }
@@ -78,10 +78,13 @@ public class MonsterCtrl : MonoBehaviour
         {
             case MonsterState.IDLE:
                 // 로직 
+                agent.isStopped = true;
                 break;
 
             case MonsterState.TRACE:
                 // 추적로직
+                agent.SetDestination(playerTr.position);
+                agent.isStopped = false;
                 break;
 
             case MonsterState.ATTACK:
